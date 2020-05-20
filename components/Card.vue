@@ -1,8 +1,8 @@
 <template>
-  <nuxt-link :to="`/jobs/${job.id}`" currentJob="job" class="card">
+  <nuxt-link :to="`/jobs/${job.id}`" class="card">
     <div class="card__body">
       <div class="card__logo">
-        <img v-bind:src="getImgUrl(job.logo)" v-bind:alt="job.comany" />
+        <img v-bind:src="getImgUrl(job.logo)" :alt="`${job.company} logo`" />
       </div>
       <div class="card__content">
         <div class="company">

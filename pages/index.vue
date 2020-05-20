@@ -44,6 +44,16 @@ const filteredlangList = arr.filter(function(item, pos) {
 });
 
 export default {
+  head: {
+    title: `Job listings app, created with Vue and Nuxt.js`,
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "A job listings page"
+      }
+    ]
+  },
   components: {
     Card
   },
