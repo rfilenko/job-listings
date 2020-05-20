@@ -7,10 +7,14 @@
         </div>
 
         <div class="box">
-          <p class="tags" @click="filterByLang" v-for="item in langs" :key="item">
-            <span>{{item}}</span>
-            <b @click.stop="clearFilter">&Cross;</b>
-          </p>
+          <ul>
+            <li>
+              <p class="tags" @click="filterByLang" v-for="item in langs" :key="item">
+                <span>{{item}}</span>
+                <b @click.stop="clearFilter">&Cross;</b>
+              </p>
+            </li>
+          </ul>
           <p v-if="isShown">available {{jobs.length}} {{jobs.length === 1 ? 'job': 'jobs'}}</p>
           <button @click="clearFilter" v-show="isShown">Clear</button>
         </div>
@@ -27,7 +31,7 @@
 
 <script>
 import Card from "~/components/Card.vue";
-import data from "~/data.json";
+import data from "static/data.json";
 
 // filter by lang
 const langs = data.map(it => it.languages);
@@ -147,6 +151,9 @@ export default {
   }
   .box {
     padding: 1rem;
+  }
+  .box ul {
+    margin-bottom: 1rem;
   }
   .box p {
     margin-left: 0;

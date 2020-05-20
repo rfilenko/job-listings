@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <AppHeader />
     <nuxt />
     <AppFooter />
@@ -40,6 +40,11 @@ body {
   background: hsl(180, 52%, 96%);
   font-size: 15px;
   color: hsl(180, 14%, 20%);
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .container {
   margin: 0 auto;
