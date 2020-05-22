@@ -6,6 +6,7 @@
         <a
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
+          rel="noopener noreferrer"
         >Frontend Mentor</a>.
       </p>
       <p>
@@ -15,7 +16,7 @@
     </div>
   </footer>
 </template>
-<style>
+<style lang="scss">
 footer {
   margin-top: auto;
   background: var(--primary-clr);
@@ -24,16 +25,19 @@ footer {
   font-size: 0.75rem;
   display: flex;
   justify-content: center;
+  a {
+    &:hover {
+      text-decoration-style: double;
+    }
+  }
 }
-footer a:hover {
-  text-decoration-style: double;
-}
+
 .attribution {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.attribution p + p {
-  margin-bottom: 0.5rem;
+  p + p {
+    margin-bottom: 0.5rem;
+  }
 }
 </style>

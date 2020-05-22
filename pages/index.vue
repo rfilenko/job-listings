@@ -18,6 +18,7 @@
           <p v-if="isShown">available {{jobs.length}} {{jobs.length === 1 ? 'job': 'jobs'}}</p>
           <button @click="clearFilter" v-show="isShown">Clear</button>
         </div>
+
         <Card
           v-for="job in jobs"
           :job="job"
@@ -81,26 +82,7 @@ export default {
 };
 </script>
 
-<style>
-:root {
-  --primary-clr: hsl(180, 29%, 50%);
-  --secondary-clr: hsl(180, 14%, 20%);
-  --accent-clr: hsl(180, 31%, 95%);
-  --white-clr: #ffffff;
-  --black-clr: #000000;
-  --lightGrey-clr: #9e9e9e;
-}
-.container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 15px;
-}
-.container > div {
-  flex-basis: 100%;
-}
+<style lang="scss">
 .hero {
   display: inline-flex;
   flex-direction: column;
@@ -122,43 +104,20 @@ export default {
   margin: 0 auto 1rem;
   padding: 1rem 2.25rem;
   max-width: 75ch;
-}
-.box p {
-  margin-left: 1rem;
-}
-
-.box button {
-  color: var(--primary-clr);
-  margin-left: auto;
-  transition: all 0.15s ease;
-}
-.box button:hover {
-  text-decoration: underline;
-}
-.btn {
-  background: var(--primary-clr);
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1.25rem;
-  color: var(--white-clr);
-}
-.title {
-  font-weight: 500;
-  font-size: 45px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-@media screen and (max-width: 1024px) {
-  .title {
-    font-size: 32px;
-    line-height: 1;
+  p {
+    margin-left: 1rem;
+  }
+  button {
+    color: var(--primary-clr);
+    margin-left: auto;
+    transition: all 0.15s ease;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
+
 @media screen and (max-width: 600px) {
-  .container {
-    padding: 0 20px;
-  }
   .box {
     padding: 1rem;
   }

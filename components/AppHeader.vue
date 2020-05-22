@@ -10,9 +10,11 @@
   </header>
 </template>
 
-<style>
-header svg {
-  width: 100%;
-  background: hsl(180, 29%, 50%);
+<style lang="scss">
+header {
+  svg {
+    width: 100%;
+    background: hsl(180, 29%, 50%);
+  }
 }
 </style>
